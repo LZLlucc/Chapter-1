@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main()
+int main(){
     double a = 1.0, b = 0.9;  
     printf("%.30lf", a - b);
     printf("%.30lf", 0.1);

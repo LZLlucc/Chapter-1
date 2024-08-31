@@ -17,8 +17,14 @@ char *del_space(char *s) {
 }  
   
 int main() {  
-    char str[] = "Hello, world!";  
+    char str[] = "He llo, worl d!";  
     char *result = del_space(str);  
-    printf("%s\n", result); // 输出: Hello,world!  
+    for (int i = 0; i < 15; i++) { // 注意：我们知道数组的大小是4  
+        if (result[i] == '\0') {  
+            printf("Found '\\0' at index %d (ASCII value: %d)\n", i, (int)'\0');  
+        } else {  
+            printf("%c\n", result[i]);  
+        }  
+    }    
     return 0;  
 }
