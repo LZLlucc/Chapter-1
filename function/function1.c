@@ -21,7 +21,7 @@ int main() {
     char *result = del_space(str);  
     for (int i = 0; i < 15; i++) { // 注意：我们知道数组的大小是4  
         if (result[i] == '\0') {  
-            printf("Found '\\0' at index %d (ASCII value: %d)\n", i, (int)'\0');  
+            printf("Found '\\0' at index %d (ASCII value: %d)\n", i, (int)'\0'); // hello,world!"\0"d! 
         } else {  
             printf("%c\n", result[i]);  
         }  

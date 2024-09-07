@@ -5,23 +5,18 @@
 int maxi(int a, int b){
     printf("max = ");
     
-    if (a < b){
-        return b;
-    }
-    return a;
+    return (a > b) ? a : b;
 }
 
 int mini(int a, int b){
     printf("min = ");
-    
-    if (a < b){
-        return a;
-    }
-    return b;
+
+    return (a < b) ? a : b; 
 }
 
 int sum(int a, int b){
     printf("sum = ");
+    
     return a + b;
 }
 
@@ -49,8 +44,8 @@ int main(){
     case 3:
         func(a, b, sum);
         break;
-    }
-    
+    }  
+    fgets
     return 0;
        
 }
