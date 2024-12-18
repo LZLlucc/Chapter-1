@@ -1,29 +1,27 @@
-#include <stdio.h>
-#include <string.h>
+#include <stdio.h>  
 
-struct Person{
-    char *name;
-    int count;
-};
+typedef struct {  
+    char *name;  
+    int age;  
+    char gender;  
+    char *tel;  
+    char *mail;  
+    int nu; // 假设这是存储位置或其他信息的整数  
+} Customer;  
 
-struct Person leader[3] = {{"zhang3", 0}, {"li4", 0}, {"wang5", 0}};
+int main() {  
+    Customer customer_array[100]; // 假设的数组  
+    Customer *p = customer_array; // 指向数组的指针  
+    Customer *q = malloc(sizeof(Customer)); // 分配新的Customer结构体  
+    int pos = 0; // 假设的位置索引  
 
-int main(){
-    char leader_name[20];
-    for (int i = 0; i < 10; i++){
-        printf("please input: ");
-        scanf("%s", leader_name);
-        for (int j = 0; j < 3; j++){
-            if (strcmp(leader_name, leader[j].name) == 0){
-                leader[j].count ++;
-                break;
-            }
-        }
-    }
-    printf("\n 统计结果：\n");
-    for (int i = 0; i < 3; i++){
-        printf("-10%s, %d\n", leader[i].name, leader[i].count);
-    
-    }
-    return 0;
+    printf("please input information:");  
+    scanf("%99s %d %c %19s %99s", q->name, &q->age, &q->gender, q->tel, q->mail);  
+    // 注意：这里使用了%99s和%19s来限制读取的字符数，防止溢出  
+
+    q->nu = pos;  
+    p[pos] = *q; // 直接赋值，无需解引用*q  
+
+    free(q); // 释放之前分配的内存  
+    return 0;  
 }
